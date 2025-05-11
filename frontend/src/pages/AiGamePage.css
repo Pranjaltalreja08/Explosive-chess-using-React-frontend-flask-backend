@@ -1,0 +1,27 @@
+.game-page {
+    background-color: #1a1a1a; /* Dark background */
+    color: #e0e0e0; /* Light text color */
+    font-family: 'Arial', sans-serif;
+}
+
+.game-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+.game-status-container {
+    display: flex;
+    align-items: center;
+}
+
+.board-section {
+    /* Styles for the chess board */
+}
+
+.game-sidebar {
+    /* Styles for the sidebar components */
+}
+
+/* Customize components with specific styles based on the provided UI images */

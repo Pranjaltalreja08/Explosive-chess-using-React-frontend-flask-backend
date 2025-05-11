@@ -1,0 +1,49 @@
+<svg width="1920" height="1080" viewBox="0 0 1920 1080" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background gradient -->
+  <defs>
+    <linearGradient id="bg-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a202c;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#2d3748;stop-opacity:1" />
+    </linearGradient>
+    <!-- Chess piece silhouettes -->
+    <path id="king" d="M25,5 L25,10 L28,10 L28,8 L22,8 L22,10 L25,10 L25,5 M18,35 L32,35 L32,32 L18,32 L18,35 M20,32 L30,32 C30,32 34,27 34,22 C34,17 30,12 25,12 C20,12 16,17 16,22 C16,27 20,32 20,32" fill="currentColor"/>
+    <path id="queen" d="M25,7 A2,2 0 0,0 23,9 A2,2 0 0,0 25,11 A2,2 0 0,0 27,9 A2,2 0 0,0 25,7 M18,35 L32,35 L32,32 L18,32 L18,35 M20,32 L30,32 C30,32 34,27 34,22 C34,17 30,12 25,12 C20,12 16,17 16,22 C16,27 20,32 20,32" fill="currentColor"/>
+    <path id="rook" d="M20,5 L20,10 L18,10 L18,15 L22,15 L22,10 L28,10 L28,15 L32,15 L32,10 L30,10 L30,5 L20,5 M18,35 L32,35 L32,32 L18,32 L18,35 M20,32 L30,32 C30,32 34,27 34,22 C34,17 30,12 25,12 C20,12 16,17 16,22 C16,27 20,32 20,32" fill="currentColor"/>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="100%" height="100%" fill="url(#bg-gradient)"/>
+  
+  <!-- Grid pattern -->
+  <pattern id="grid" x="0" y="0" width="200" height="200" patternUnits="userSpaceOnUse">
+    <rect width="200" height="200" fill="none" stroke="rgba(255,255,255,0.05)" stroke-width="1"/>
+  </pattern>
+  <rect width="100%" height="100%" fill="url(#grid)"/>
+  
+  <!-- Chess pieces -->
+  <g style="opacity:0.1">
+    <!-- Animated pieces -->
+    <use href="#king" transform="translate(300,300) scale(3)" fill="#fff">
+      <animateTransform attributeName="transform" type="translate" values="300,300; 300,280; 300,300" dur="4s" repeatCount="indefinite"/>
+    </use>
+    <use href="#queen" transform="translate(600,500) scale(3)" fill="#fff">
+      <animateTransform attributeName="transform" type="translate" values="600,500; 600,480; 600,500" dur="4s" begin="-1s" repeatCount="indefinite"/>
+    </use>
+    <use href="#rook" transform="translate(900,400) scale(3)" fill="#fff">
+      <animateTransform attributeName="transform" type="translate" values="900,400; 900,380; 900,400" dur="4s" begin="-2s" repeatCount="indefinite"/>
+    </use>
+    
+    <!-- Static pieces -->
+    <use href="#king" transform="translate(1200,600) scale(3)" fill="#fff"/>
+    <use href="#queen" transform="translate(1500,300) scale(3)" fill="#fff"/>
+    <use href="#rook" transform="translate(1800,500) scale(3)" fill="#fff"/>
+  </g>
+  
+  <!-- Subtle glow effects -->
+  <circle cx="400" cy="300" r="200" fill="rgba(79,70,229,0.1)">
+    <animate attributeName="opacity" values="0.1;0.2;0.1" dur="4s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="1500" cy="800" r="300" fill="rgba(79,70,229,0.1)">
+    <animate attributeName="opacity" values="0.1;0.2;0.1" dur="4s" begin="-2s" repeatCount="indefinite"/>
+  </circle>
+</svg>

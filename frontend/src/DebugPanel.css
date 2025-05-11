@@ -1,0 +1,87 @@
+.debug-panel {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    width: 300px;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    border-top-left-radius: 8px;
+    transform: translateY(calc(100% - 40px));
+    transition: transform 0.3s ease;
+    z-index: 1000;
+  }
+  
+  .debug-panel.open {
+    transform: translateY(0);
+    max-height: 80vh;
+    overflow-y: auto;
+  }
+  
+  .debug-toggle {
+    width: 100%;
+    padding: 10px;
+    background-color: #333;
+    color: blue;
+    border: none;
+    border-top-left-radius: 8px;
+    cursor: pointer;
+  }
+  
+  .debug-content {
+    padding: 15px;
+  }
+  
+  .debug-section {
+    margin-bottom: 15px;
+    border-bottom: 1px solid #555;
+    padding-bottom: 10px;
+  }
+  
+  .debug-section h4 {
+    margin-top: 0;
+    margin-bottom: 8px;
+    color: #aaa;
+  }
+  
+  .connected {
+    color: #4caf50;
+    font-weight: bold;
+  }
+  
+  .disconnected {
+    color: #f44336;
+    font-weight: bold;
+  }
+  
+  .debug-mini-board {
+    display: grid;
+    grid-template-rows: repeat(8, 20px);
+    border: 1px solid #555;
+    width: 160px;
+    margin: 0 auto;
+  }
+  
+  .debug-board-row {
+    display: grid;
+    grid-template-columns: repeat(8, 20px);
+  }
+  
+  .debug-square {
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+  }
+  
+  .debug-white {
+    background-color: #eee;
+    color: #333;
+  }
+  
+  .debug-black {
+    background-color: #777;
+    color: white;
+  }
+  
